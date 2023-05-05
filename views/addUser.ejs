@@ -1,0 +1,72 @@
+<%- include('layout/header') %>
+
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-6 mx-auto mt-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary">
+                    <h3 class="text-light">
+                        Add New User    
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/add" id="add-form" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" name="name"class="form-control.form-control-lg" placeholder="Enter name" required/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email" required/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone   ">Phone</label>
+                            <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter your Phone " required/>
+                        </div>
+
+                        <div class="mb-3">  
+                            <label>Gender</label>
+                            <label for="male">
+                                <input type="radio" id="male" value="male" name="gender">Male
+                            </label>
+
+                            <label for="female">
+                                <input type="radio" id="female" value="female" name="gender">Female
+                            </label>
+                        </div>
+
+                        <div class="mb-3">
+                            <fieldset>
+                                <legend>Current Year</legend>
+                            <label for="yearone">
+                                <input type="checkbox" id="yearone" name="currentyear" value="year1">Year 1
+                            </label>
+
+                            <label for="yeartwo">
+                                <input type="checkbox" id="yeartwo" name="currentyear" value="year2">Year 2
+                            </label>
+
+                            <label for="yearthree">
+                                <input type="checkbox" id="yearthree" name="currentyear" value="year3">Year 3
+                            </label>
+                            </fieldset>
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="image">Select image</label>
+                            <input type="file" name="image" class="form-control form-control-lg"   required/>
+                        </div>
+
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" value="Add User" class="btn btn-primary btn-lg"> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+<%- include('layout/footer') %>
